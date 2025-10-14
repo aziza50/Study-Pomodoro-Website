@@ -10,7 +10,7 @@ function ToDos() {
       setNewTask("");
     }
   };
-
+  //
   const crossOff = (index) => {
     const crossOutTask = [...tasks];
     crossOutTask[index].completed = true;
@@ -25,6 +25,7 @@ function ToDos() {
     <div className="bg-white rounded-2xl w-70 p-4 m-4 shadow-lg">
       <h2 className="text-center text-lg font-bold bg-white">To-Do List</h2>
       <ul className="list-disc pl-5">
+        {/*We use .map to dynamically show each task and id necessary for React to handle states of each task*/}
         {tasks.map((task, index) => (
           <li key={index} className="text-sm">
             <button
@@ -48,13 +49,13 @@ function ToDos() {
         />
         <button
           onClick={addTask}
-          className="mt-2 bg-[#fc9292] text-white px-4 py-2 rounded w-full"
+          className="mt-2 bg-[#FFC857] text-white px-4 py-2 rounded w-full"
         >
           Add Task
         </button>
         <button
           onClick={clearTasks}
-          className="mt-2 bg-[#fc9292] text-white px-4 py-2 rounded w-full"
+          className="mt-2 bg-[#FFC857] text-white px-4 py-2 rounded w-full"
         >
           Clear All
         </button>
